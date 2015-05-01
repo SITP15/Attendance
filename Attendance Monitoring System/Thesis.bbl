@@ -1,0 +1,34 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Rao and Prof.K.J.Satoal(April 2013)]{sups}
+Seema Rao and Prof.K.J.Satoal.
+\newblock “an attendance monitoring system using biometrics
+  authentication”.
+\newblock \emph{International Journal of Advanced Research in Computer Science
+  and Software Engineering}, 3\penalty0 (4):\penalty0 213--217, April 2013.
+
+\bibitem[BEHARA and RAGHUNADH(5-May-2013)]{manju}
+APARNA BEHARA and M.V. RAGHUNADH.
+\newblock “face recognition system for time and attendance applications.
+\newblock \emph{International Journal of Electrical, Electronics and Data
+  Communication}, 1\penalty0 (4), 5-May-2013.
+
+\bibitem[MuthuKalyani.K and VeeraMuthu.A(October 2013)]{priti}
+MuthuKalyani.K and VeeraMuthu.A.
+\newblock “smart application for ams using face recognition”.
+\newblock \emph{Computer Science and Engineering: An International Journal
+  (CSEIJ)}, 3\penalty0 (5), October 2013.
+
+\bibitem[Dr. S. Ramnarayan~REDDY and BANSAL(February 2013)]{pdya}
+Deepanshu~GOYAL Dr. S. Ramnarayan~REDDY and Ankit BANSAL.
+\newblock “mobile based attendance management system”.
+\newblock \emph{“Student Attendance Tracker System in Android”,
+  INTERNATIONAL JOURNAL FOR ENGINEERING APPLICATIONS AND TECHNOLOGY (IJFEAT)},
+  9:\penalty0 119--124, February 2013.
+
+\end{thebibliography}

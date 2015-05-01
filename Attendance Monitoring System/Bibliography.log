@@ -1,0 +1,27 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdftex 2015.3.14)  27 MAR 2015 22:55
+entering extended mode
+**C:/Users/Rahul/Desktop/DIGI*RESTAURATEUR*PROJECT*REPORT**IN*LATEX/Bibliograph
+y.bib
+
+("C:/Users/Rahul/Desktop/DIGI RESTAURATEUR PROJECT REPORT  IN LATEX/Bibliograph
+y.bib"
+Overfull \hbox (22.91273pt too wide) in paragraph at lines 1--5
+[]\tenrm @articlebhargave2013digital, ti-tle=Digital Or-der-ing Sys-tem for Res
+tau-rant Us-ing An-droid, au-thor=Bhargave,|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+)
+*
+! Emergency stop.
+<*> ...R*PROJECT*REPORT**IN*LATEX/Bibliography.bib
+                                                  
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,346 @@
+
+\chapter{CODING}
+\section {College Form:} 
+
+This is First form in go method teacher must be enter college id. After entering college Id it can go to clgverifiy method it can compare the database if matches then display welcome to respective college. otherwise It can display Welcome to Null college.
+
+\lstset{language=[Sharp]C,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  escapeinside={(*@}{@*)},
+  commentstyle=\color{greencomments},
+  keywordstyle=\color{bluekeywords},
+  stringstyle=\color{redstrings},
+  basicstyle=\ttfamily}
+
+\begin{lstlisting}
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.json.JSONObject;
+
+public class CollegeForm extends Activity 
+{
+public void goMethod(View v)
+{
+if(clgId.equals(""))
+{
+Toast.makeText(getApplicationContext(), "Must Be Enter College ID", Toast.LENGTH_SHORT).show();
+}
+Else
+{
+clgVerify();
+flagOfClgName=compareNm;
+Toast.makeText(CollegeForm.this,"WELCOME TO "+compareNm +  "College",Toast.LENGTH_SHORT).show();
+Intent i=new Intent(CollegeForm.this,MultiOption Form.class);
+startActivity(i); }
+}
+}
+public void clgVerify()
+{
+try
+{
+HttpEntity entity = response.getEntity();
+is = entity.getContent();
+Log.e("pass 1", "connection success ");
+}
+catch(Exception e)
+{
+Log.e("Fail 1", e.toString());
+Toast.makeText(getApplicationContext(), "Invalid IP Address",
+Toast.LENGTH_LONG).show();
+}
+try
+{
+while ((line = reader.readLine()) != null)
+{
+sb.append(line + "\n");
+}
+is.close();
+result = sb.toString();
+Log.e("pass 2", "connection success ");
+}
+catch(Exception e)
+{
+Log.e("Fail 2", e.toString());
+}
+try
+{
+JSONObject json_data = new JSONObject(result);
+compareNm=(json_data.getString("name"));
+}
+catch(Exception e)
+{
+Log.e("Fail 3", e.toString());
+}
+}
+}
+\end{lstlisting}
+
+\section{MultiOption Form:}
+
+The main class MultiOption Form for the multi-optional form. There are several methods are present.
+
+\begin{itemize}
+\item registerOptionMethod-
+This is the method for the student registration form. This method is intended to the Register form. Then activity is started.
+\item void loginOptionForm-
+This is the method for the Login form. This method is intended to the Login Form. Then activity is started.
+\item attendanceMethod-
+This is the method for the Attendance Sheet. This method is intended to the Attendance Sheet. Then activity is started.
+\item getReportMethod
+This is the method for the get report . This method is intended to the Get Report . Then activity is started.
+\end{itemize}
+
+\begin{lstlisting}]
+public class MultiOption Form extends Activity
+public void registerOptionMethod(View v)
+{
+Intent i=new Intent(MultiOption Form.this,Register_form.class);
+startActivity(i);
+}
+public void loginOptionForm(View v1)
+{
+Intent i=new Intent(MultiOption Form.this,Login_Form.class);
+startActivity(i);
+}
+public void  attendanceMethod(View v11)
+{
+Intent i=new Intent(MultiOption Form.this,Attendance_Sheet.class);
+startActivity(i);
+}
+public void getReportMethod(View v111)
+{
+Intent ii=new Intent(MultiOption Form.this,Get_Report.class);
+startActivity(ii);
+}
+\end{lstlisting}
+
+\section{Register form:}
+The main class Register form for the student registration form. In this form the student fill the basic information like roll no, name, password, year, branch, semester. There are some of the methods are present.They are as follows:
+\begin{itemize}
+\item addListenerOnSpinnerItemSelection2-
+The first method is for the selection of the semester for the student in which they are studying \& it is given in the form of the spinner.
+\item  addListenerOnSpinnerItemSelection1-
+\end{itemize}
+
+The another method is faceDetectMethod. This is intended to the FdActivity for the purpose of the face detection.
+
+\begin{lstlisting}
+public class Register form extends Activity
+private void addListenerOnSpinnerItemSelection2()
+{
+semister.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+}
+private void addListenerOnSpinnerItemSelection1() {
+branch.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+}
+private void addListenerOnSpinnerItemSelection()
+{
+year.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+}
+public void  registerMethod(View v)
+{
+if((StudRollNo.equals("")) || (StudName.equals("")) || (StudPassword.equals("")) || (StudYear.equals("")) || (StudBranch.equals("")) || (StudSemister.equals("")))
+{
+Toast.makeText(getApplicationContext(), "Field Vacant", Toast.LENGTH_SHORT).show();
+}
+else{
+Toast.makeText(Register_form.this, "Successfully", Toast.LENGTH_SHORT).show();
+insert();
+Intent i=new Intent(Register_form.this,Login_Form.class);
+startActivity(i); }
+}
+
+public void faceDetectMethod(View v1)
+{
+Intent ii=new Intent(Register_form.this,FdActivity.class);
+startActivity(ii);
+}
+public void insert()
+{
+if(code==1)
+{
+Toast.makeText(Register_form.this, "Insert Successfully", Toast.LENGTH_SHORT).show();
+}
+else
+{
+Toast.makeText(getBaseContext(), "Sorry, Try Again",Toast.LENGTH_LONG).show();
+}
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+public class Login_Form extends Activity {
+public void loginMethod(View v)
+{
+studRollNo=rollNo.getText().toString();
+studPassword=password.getText().toString();
+getlogin();
+}
+public void saveFaceMethod(View v)
+{
+Intent i=new Intent(Login_Form.this,FdActivity.class);
+startActivity(i);
+}
+public void getlogin()
+{
+try
+{
+if(studPassword.equals(pass))
+{
+Toast.makeText(Login_Form.this, "Login Successfully",      Toast.LENGTH_SHORT).show();
+}
+}
+catch(Exception e)
+{
+Log.e("Fail 3", e.toString());
+}
+}
+public void backMethod(View v)
+{
+Intent i=new Intent(Login_Form.this,MultiOption_Form.class);
+startActivity(i);
+}
+}
+\end{lstlisting}
+
+
+\section{Login:}
+
+ In this method the Login Form is intended to the MultiOption Form. Then activity is performed.
+
+The class Login Form for the login activity. There are some methods are used. They are:
+\begin{itemize}
+\item loginMethod-
+ Here when student gives the Roll no.\& password then it goes to the getlogin() method.
+\item saveFaceMethod- 
+This method is intented to the FdActivity class for the purpose of the face detection activity. Here the face is saved which is given by the student.
+\item Getlogin-
+ In this method if the login get successfully then the roll no \& password is stored in the database otherwise it gives the message Invalid IP address.
+\item void backMethod- 
+ In this method the Login Form is intended to the MultiOption Form. Then activity is performed.
+\end{itemize}
+
+\begin{lstlisting}
+public class Login_Form extends Activity {
+public void loginMethod(View v)
+{
+studRollNo=rollNo.getText().toString();
+studPassword=password.getText().toString();
+getlogin();
+}
+public void saveFaceMethod(View v)
+{
+Intent i=new Intent(Login_Form.this,FdActivity.class);
+startActivity(i);
+}
+public void getlogin()
+{
+try
+{
+if(studPassword.equals(pass))
+{
+Toast.makeText(Login_Form.this, "Login Successfully",      Toast.LENGTH_SHORT).show();
+}
+}
+catch(Exception e)
+{
+Log.e("Fail 3", e.toString());
+}
+}
+public void backMethod(View v)
+{
+Intent i=new Intent(Login_Form.this,MultiOption_Form.class);
+startActivity(i);
+}
+}
+\end{lstlisting}
+
+\section{Face Detection Activity:}
+
+This package is import help for face detection activity in that the camera is opened and the detecting the face which store the Registration phase.	
+
+The next method is for the selection of the branch for the student in which they are studying \& it is given in the form of the spinner.
+\begin{itemize}
+\item  addListenerOnSpinnerItemSelection-
+The next method is for the selection of the year for the student in which they are studying \& it is given in the form of the spinner.
+
+\item registerMethod-
+The next method is registerMethod. In this method it checks for the field. If the single of the field is remaining to fill it gives the message Field Vacant otherwise Successfully. And also it is intended to the login form.
+
+\item  faceDetectMethod-
+The another method is insert. In this if the all field in form are filled successfully the it gives the "Insert Successfully" message otherwise it gives the “Sorry, Try Again” message.
+\end{itemize}
+
+\begin{lstlisting}
+Import org.opencv.android.BaseLoadeitemizerCallback;
+\end{lstlisting}
+
+Default BaseLoaderCallback implementation treats application context as Activity and calls Activity.finish() method to exit in case of initialization failure. To override this behavior you need to override finish() method of BaseLoaderCallback class and implement your own finalization method.In an android activity this line of code should be in the onResume(), but in an android service I don't an onResume() method.
+
+\begin{lstlisting}
+Import org.opencv.android.CameraBridgeViewBase.CvCameraViewFrame;
+\end{lstlisting}
+
+We need to pick an appropriate size for the preview frames, as too small frames will result in a bad result when we do the processing, and too large frames will slow down everything to an unacceptable level. Since smartphone cameras often have a different set of supported sizes for preview frames, we need to pick a minimum acceptable size
+In order to convert a color image to Grayscale image using OpenCV, we read the image into BufferedImage and convert it into Mat Object. Its syntax is given below:
+
+\begin{lstlisting}
+File input = new File("digital_image_processing.jpg");
+BufferedImage image = ImageIO.read(input);
+\end{lstlisting}
+
+
+Then you can transform the image from RGB to Grayscale format by using method cvtColor() in the Imgproc class. Its syntax is given below:
+
+\begin{lstlisting}
+Imgprot.cvtColor(source mat, destination mat1, Imgproc.COLOR_RGB2GRAY);
+\end{lstlisting}
+
+In order to change color space of one image to another using OpenCV, we read image into BufferedImage and convert it into Mat Object. Its syntax is given below:
+
+\begin{lstlisting}
+File input = new File("digital_image_processing.jpg");
+BufferedImage image = ImageIO.read(input);
+//convert Buffered Image to Mat.
+public class FdActivity extends Activity implements CvCameraViewListener2
+ {
+private static final String    TAG                 = "OCVSample::Activity";
+private static final Scalar    FACE_RECT_COLOR = new Scalar(0, 255, 0, 255);
+public static final int        JAVA_DETECTOR       = 0;
+public static final int        NATIVE_DETECTOR     = 1;
+public static String flag="No";
+public static String flagRollNo=" ";
+public static final int TRAINING= 0;
+public static final int SEARCHING= 1;
+public static final int IDLE= 2;
+private static final int frontCam =1;
+private static final int backCam =2;
+\end{lstlisting}
+
+\section{Get Report:}
+Click on the get report button then entering the subject name and date. This is a client request to go http server in that use the php server page. In that use the post and get method. So that gives the response to the client or user.
+
+It can goto the HttpPost method is used it goto he link dhttp: If connection is successfully display the report. Otherwise display Invalid IP address.
+
+\begin{lstlisting}
+public void  getreport()
+{
+ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+nameValuePairs.add(new BasicNameValuePair("SelectSubject",SelectSubject));
+nameValuePairs.add(new BasicNameValuePair("SelectDate",SelectDate));
+try
+{
+HttpClient httpclient = new DefaultHttpClient();
+HttpPost httppost = new HttpPost("http://original.orgfree.com/attendance_report.php");
+Httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+HttpResponse response = httpclient.execute(httppost);
+HttpEntity entity = response.getEntity();
+is = entity.getContent();
+Log.e("pass 1", "connection success ");
+}
+\end{lstlisting}
+
+

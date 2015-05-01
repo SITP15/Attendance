@@ -1,0 +1,191 @@
+\chapter{TESTING}
+
+\section{What is Software Testing: }
+Software testing is the process of analyzing or operating software for the purpose of finding bugs.
+Testing can be described as a process used for reveling defects in software, and for establishing that the software has attained a specified degree of quality with respect to selected attribute.The fundamental objective of testing is to find defects ,as early as possible and get them fixed.
+
+{\bf Software Testing Process: }
+\begin{itemize}
+\item Test Planning:
+ high level plans which list test objectives, test approach, measurement criteria along with test schedule and resources.
+ \item Test Design:
+create test cases, identify test cases for automation(if applicable),prioritize test cases and finalize test iterations.
+\item Test Implementation:
+Create test scripts using automated testing tools.
+\item Test Execution:
+Execute the test cases on the test environment and test reports.
+\item Test analysis:
+Use test and project metrics to calculate key indicators. The data usually will be obtained from your defect tracking system.
+\item Postmortem Reviews:
+Discuss lessons learnt and identify strategies which will prevent such problems in future.
+\end{itemize}
+
+\section{Test methods: }
+\subsection{Black box testing: }
+It is also called as functional testing, it is the process of giving the input to the system and checking the output of the system.Without bothering about the system that how the system generates the output. It is also called as Behavior testing.
+
+\begin{itemize}
+\item Approach to testing where the program is considered as a “Black Box”.
+\item Testing based solely on analysis of requirements  user specification, user documentation etc.
+\item The test cases are based on the specifications.
+\item Black box testing techniques apply to all levels of testing.
+\item Test planning and design can begin early in the software process.
+\item Tests are done from a users point of view.
+\end{itemize}
+
+  As per black box testing rule we are testing the overwiev of project.
+  we are testing the our implemented whole  project working or not. just checking the
+  giving input and getting output or not. just clicking on any android file it browse or not . 
+
+\subsection{White Box Testing: }
+ 1) white box testing :
+ White Box Testing method is applicable to the following levels of software testing those applied in your project:
+\begin{itemize}
+     \item                  Unit Testing: For testing paths within a unit.
+     \item                  Integration Testing: For testing paths between units.
+      \item                 System Testing: For testing paths between subsystems.
+\end{itemize}
+           
+                1) Unit Testing :
+                             In this testing check the coding of android file those are installed on mobile.
+                      also check the php code those are use full for hosting the website. also check the code 
+                      of interpeter those are interfacing the java compiler.
+                 
+               2) Integration Testing :
+                                  In Intergation testing we are testing the path of different submodel
+                     in this checking the Android codes whole path those are conneted properly or not means 
+                     on the clicking on the video the video index is opened properly or not. doing same thing for 
+                      every unit. 
+
+               3) System Testing :
+                             In System Testing We are testing the whole system. In this mostly We are testing the 
+                   paths withing subsystems.and also to checking whole system will be connected propely or not 
+                   we have check as per IP adderss and android aaps linking the whole system working properly not .
+                   in that mostly We are testing  the cloud is properly acessible on android. 
+                             In that testing we are checking the those IASS, PASS, SaaS these concept is implemented 
+                     properly well or not and its working properly or not .
+  
+
+\section{Test cases and Test data: }
+\begin{itemize}
+\item Test data are inputs that have been devised to test the system.
+\item Test cases are inputs and output specification plus a statement of the function under test.
+\item Test data can be generated automatically or real. 
+\end{itemize}
+\begin{center}
+\begin{landscape}
+\begin{longtable}{|p{1cm}|p{3.4cm}|p{4cm}|p{4cm}|p{3cm}|p{3cm}|p{1cm}|}
+\caption{Test Cases}
+\label{fault_diagnosis_tab2}\\
+\hline
+\textbf{Sr.No.} & \textbf{ Objectives } & \textbf{Prerequisites } & \textbf{ Steps to be followed } & \textbf{ Expected Result } & \textbf{Actual Result} & \textbf{ Remark }
+\\
+%\hline
+\endfirsthead
+\multicolumn{7}{c}%
+{{\bfseries
+\tablename\
+\thetable{}
+--‐--‐
+continued
+from
+previous
+page}}
+\\
+\hline
+\textbf{Sr.No.} & \textbf{ Objectives} & \textbf{Prerequisites } & \textbf{Steps to be followed } & \textbf{Expected Result  } & \textbf{Actual Result } & \textbf{ Remark }
+\\
+%\hline
+\endhead
+\hline
+%%\multicolumn{7}{|r|}{{Continued on next page}}
+%\\
+%\hline
+%\endfoot
+%\endlastfoot
+    1     &Start the application.  & Application should be installed. & 1.Go to menu. 2.Click on application icon. & Application should Start. & Application get started successfully. & Pass \\ \hline
+
+       2   &  Enter College code id. &  Application should be started. &1. Enter college id. 2.Click on Go button. &  Accept the college id and then go to next step. & Take the id and go to next step.  &  Pass \\ \hline
+
+    3    & Different option forms are open. &  It can be open form & It open the different forms. & Different forms are open. & It can open different forms successfully. & Pass \\ \hline
+
+4 & Click on student registration button. & click on it and open the form. & Click on the student registration form. &  Open the registration form. & It can open form successfully.  & Pass \\ \hline
+        
+    5     & Fill the registration form.  &Form should be open. & Fill the form. & It show the all the content. & It show all data. & Pass \\ \hline
+
+    6     & Click on Name field. & It should be open and give the only character or letter. & Enter the name. & It take the name only character. & It taken charater letter name. & Pass \\ \hline  
+    
+    7     & Click on roll number field. &  Should be click on it  and give only number. & Enter the roll no. & It take only roll number  & It taken the roll number  & Pass\\ \hline
+
+ 8  & Click on the Year field. & It  should be open the field. & Enter the Year.  & It take the year of studying. & It taken the year of study. & Pass \\ \hline
+
+  9   & Click on Branch field. & It  should be open the field. & Enter the branch of student. & It take the branch of the student. & It taken the branch.  & Pass \\ \hline
+
+    10    & Click on  Semister field & It  should be open the field & Enter the semister   & It take the Semester of the student & It taken the semester & Pass \\ \hline
+
+    11    & Click on the Password field & It  should be open the field & Enter the Password & It take the password from student & it taken the password & Pass \\ \hline
+
+    12    & Click on  registraion botton & All field in this form should be filled & Click on the registration button & Submit all the information which is filled by student  & Submitted all information & Pass \\ \hline
+
+    13    & Open next form & It should be fill all the field & Fill the all the field & It fill all record & It not procede if any field is empty & Pass \\ \hline
+
+    14    & Click on the login form & Registration form must be filled & Click on the Login form & Open the login form & Login form opened & Pass \\ \hline
+
+    15    & Click on Roll no & It  should be open the field & Enter roll no which is given in the registration form & It takee roll no & Roll Number is taken & pass \\ \hline
+
+    16    & Click on Password & It  should be open the field & Enter password  which is given in the registration form & it take password & Password is taken  & Pass \\ \hline
+
+    17    & Click on the Login Button & All field in this form should be filled & Fill the form & Filling successful form & form successfully filled & Pass \\ \hline
+
+    18    & Click on Save Face Button & Successfully filled registration \& Login form & Click on the Save face button & Submit all the information which is filled by student  & Submitted all information & Pass \\ \hline
+
+    19    & Open the camera & Fill login form successfully & It capture the face of student & Capturing the face of student & successfully face is captured & Pass \\ \hline       
+
+    20    & Camera & It should requird opencv manager application & It atomaticaly open the camera from open cv manager & Open camera & Successfully open camera & Pass \\ \hline
+
+    21    & Click on train button & i)Fill login form successfully. ii)Give the roll no.  & 1.Give face number. 2.Give face.  & Collect the images & Successfully it generates the set of the images & Pass \\ \hline
+
+    22    & Click on the rec button & Roll no should be given & Click on rec button & Face will be recognized & Face successfully recognized & Pass \\ \hline
+
+    23    & Take one image only & Give face image & Give face image & Face is capture & It give more than one image & Fail \\ \hline
+
+    24    & Click on the stop train button  & Face should be captured & Click on the train button & Stop the trainy set & Trainy set is stopped successfully & Pass \\ \hline
+
+    25    & Click on the Search button & Trainy set must be given & Click on the serach button & Direct go to attendance sheet form & Attendance sheet form is opened & Pass \\ \hline
+
+     26    & Open the select optional form & It should be open & Registration is competed & Open the multi optional form & It not open this form dirctly & Fail \\ \hline
+
+    27   & Click on Subject Name & It  should be open the field.  & Enter the subject name & Take the subject name & Subject name is taken & Pass \\ \hline
+
+    28    & Click on Date & It  should be open the field & Enter the Date & Take the Date & Date is taken & Pass \\ \hline
+
+    29    & Click on Student Roll No & It  should be open the field & Enter the student roll no & Take the students roll no & Roll number is taken & Pass \\ \hline
+
+    30    & Click on done button & Should be click on done button & Click on done button & It gives the remark & Remark is given & pass \\ \hline
+
+    31    & Click on face recognition button & It should be click on it and open camera & Click on face recognization button & Open the camera and take face image & It open camera and take the face image & Pass \\ \hline
+
+    32    & Give remark & It should give remark & It give  atomaticaly remark & It give remark & It give remark & Pass \\ \hline
+
+    33    & Click on back button & Should be Click on back button & Click on back button & It go to previous form & Previous form is opened & Pass \\ \hline
+
+    34    & Click on get report & It  should be open the field & Click on the get report button & Gives the report & Report is given & Pass \\ \hline
+
+    35    & Click on Subject Name & It  should be open the field & Enter the subject name & Enter the subject name & Subject name is taken & Pass \\ \hline
+
+    36    & Click on Date & It  should be open the field & Enter the date & Enter the date & Date is taken & Pass \\ \hline
+
+    37    & Click on get report button & It  should be open the field & Click on the get report button & Report should give & Report is given & Pass \\ \hline
+
+    38    & It give report of subject & It should give report & Click on get report button & Get report & It give report of subject & Pass \\ \hline
+
+\end{longtable}
+\end{landscape}
+\end{center}
+
+
+
+
+
+
+
